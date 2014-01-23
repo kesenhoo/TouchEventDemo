@@ -43,10 +43,10 @@ public class ChildeLayout extends LinearLayout {
     public boolean onInterceptTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN");
-                //break;
-                Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
-                return true;
+                Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN");
+                break;
+                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
+                //return true;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_UP");
                 break;
