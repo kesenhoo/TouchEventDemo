@@ -25,6 +25,9 @@ public class ParentLayout extends LinearLayout {
                 break;
 //                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN, return true");
 //                return true;
+            case MotionEvent.ACTION_MOVE:
+                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE");
+                break;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_UP");
                 break;
@@ -47,6 +50,11 @@ public class ParentLayout extends LinearLayout {
                 break;
                 //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
                 //return true;
+            case MotionEvent.ACTION_MOVE:
+                Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE");
+                break;
+                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE, return true");
+                //return true;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_UP");
                 break;
@@ -64,6 +72,9 @@ public class ParentLayout extends LinearLayout {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "[onTouchEvent] -> ACTION_DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.d(TAG, "[onTouchEvent] -> ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[onTouchEvent] -> ACTION_UP");

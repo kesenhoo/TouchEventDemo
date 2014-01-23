@@ -9,11 +9,11 @@ import android.widget.LinearLayout;
 /**
  * Created by hook on 14-1-22.
  */
-public class ChildeLayout extends LinearLayout {
+public class ChildLayout extends LinearLayout {
 
-    private static final String TAG = ChildeLayout.class.getSimpleName();
+    private static final String TAG = ChildLayout.class.getSimpleName();
 
-    public ChildeLayout(Context context, AttributeSet attrs) {
+    public ChildLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -23,8 +23,13 @@ public class ChildeLayout extends LinearLayout {
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN");
                 break;
-//                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN, return true");
-//                return true;
+                //Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN, return true");
+                //return true;
+            case MotionEvent.ACTION_MOVE:
+                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE");
+                break;
+                //Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE, return true");
+                //return true;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_UP");
                 break;
@@ -47,6 +52,11 @@ public class ChildeLayout extends LinearLayout {
                 break;
                 //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
                 //return true;
+            case MotionEvent.ACTION_MOVE:
+                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE");
+                //break;
+                Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE, return true");
+                return true;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_UP");
                 break;
@@ -64,6 +74,9 @@ public class ChildeLayout extends LinearLayout {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "[onTouchEvent] -> ACTION_DOWN");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.d(TAG, "[onTouchEvent] -> ACTION_MOVE");
                 break;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[onTouchEvent] -> ACTION_UP");

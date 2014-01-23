@@ -23,9 +23,9 @@ public class InnerButton extends Button{
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN");
                 break;
-//            case MotionEvent.ACTION_MOVE:
-//                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE");
-//                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE");
+                break;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_UP");
                 break;
@@ -44,9 +44,9 @@ public class InnerButton extends Button{
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "[onTouchEvent] -> ACTION_DOWN");
                 break;
-//            case MotionEvent.ACTION_MOVE:
-//                Log.d(TAG, "[onTouchEvent] -> ACTION_MOVE");
-//                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.d(TAG, "[onTouchEvent] -> ACTION_MOVE");
+                break;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[onTouchEvent] -> ACTION_UP");
                 break;
