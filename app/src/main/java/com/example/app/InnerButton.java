@@ -9,11 +9,11 @@ import android.widget.Button;
 /**
  * Created by hook on 14-1-22.
  */
-public class MyButton extends Button{
+public class InnerButton extends Button{
 
-    private static final String TAG = MyButton.class.getSimpleName();
+    private static final String TAG = InnerButton.class.getSimpleName();
 
-    public MyButton(Context context, AttributeSet attrs) {
+    public InnerButton(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

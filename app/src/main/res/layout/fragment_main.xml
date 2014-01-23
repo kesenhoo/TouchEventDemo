@@ -8,14 +8,20 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.app.MainActivity$PlaceholderFragment">
 
-    <com.example.app.MyLayout
+    <com.example.app.ParentLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="200dp"
         android:gravity="center"
-        android:background="@android:color/holo_blue_bright">
-        <com.example.app.MyButton
-            android:text="@string/hello_world"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </com.example.app.MyLayout>
+        android:background="@android:color/holo_blue_dark">
+        <com.example.app.ChildeLayout
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:background="@android:color/holo_green_dark">
+            <com.example.app.InnerButton
+                android:text="@string/hello_world"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.example.app.ChildeLayout>
+    </com.example.app.ParentLayout>
 </RelativeLayout>

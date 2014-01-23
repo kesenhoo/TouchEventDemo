@@ -9,11 +9,11 @@ import android.widget.LinearLayout;
 /**
  * Created by hook on 14-1-22.
  */
-public class MyLayout extends LinearLayout {
+public class ParentLayout extends LinearLayout {
 
-    private static final String TAG = MyLayout.class.getSimpleName();
+    private static final String TAG = ParentLayout.class.getSimpleName();
 
-    public MyLayout(Context context, AttributeSet attrs) {
+    public ParentLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
