@@ -41,7 +41,9 @@ public class ChildLayout extends LinearLayout {
             default:
                 break;
         }
-        return super.dispatchTouchEvent(event);
+        boolean superReturn = super.dispatchTouchEvent(event);
+        Log.i(TAG, "[dispatchTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 
     @Override
@@ -53,10 +55,10 @@ public class ChildLayout extends LinearLayout {
                 //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
                 //return true;
             case MotionEvent.ACTION_MOVE:
-                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE");
-                //break;
-                Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE, return true");
-                return true;
+                Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE");
+                break;
+                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE, return true");
+                //return true;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_UP");
                 break;
@@ -66,7 +68,9 @@ public class ChildLayout extends LinearLayout {
             default:
                 break;
         }
-        return super.onInterceptTouchEvent(event);
+        boolean superReturn = super.onInterceptTouchEvent(event);
+        Log.i(TAG, "[onInterceptTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 
     @Override
@@ -87,6 +91,8 @@ public class ChildLayout extends LinearLayout {
             default:
                 break;
         }
-        return super.onTouchEvent(event);
+        boolean superReturn = super.onTouchEvent(event);
+        Log.i(TAG, "[onTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 }

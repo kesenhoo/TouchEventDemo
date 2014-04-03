@@ -1,9 +1,8 @@
 package com.example.app;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,7 +10,6 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -74,11 +72,13 @@ public class MainActivity extends ActionBarActivity {
                 break;
                 //Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN, return true");
                 //return true;
-            case MotionEvent.ACTION_UP:
-                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_UP");
-                break;
             case MotionEvent.ACTION_MOVE:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE");
+                break;
+//                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE, return true");
+//                return true;
+            case MotionEvent.ACTION_UP:
+                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_UP");
                 break;
             case MotionEvent.ACTION_CANCEL:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_CANCEL");
@@ -86,7 +86,9 @@ public class MainActivity extends ActionBarActivity {
             default:
                 break;
         }
-        return super.dispatchTouchEvent(ev);
+        boolean superReturn = super.dispatchTouchEvent(ev);
+        Log.i(TAG, "[dispatchTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 
     @Override
@@ -107,7 +109,9 @@ public class MainActivity extends ActionBarActivity {
             default:
                 break;
         }
-        return super.onTouchEvent(event);
+        boolean superReturn = super.onTouchEvent(event);
+        Log.i(TAG, "[onTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 
 

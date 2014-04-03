@@ -23,8 +23,8 @@ public class ParentLayout extends LinearLayout {
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN");
                 break;
-//                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN, return true");
-//                return true;
+                //Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN, return true");
+                //return true;
             case MotionEvent.ACTION_MOVE:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE");
                 break;
@@ -39,17 +39,19 @@ public class ParentLayout extends LinearLayout {
             default:
                 break;
         }
-        return super.dispatchTouchEvent(event);
+        boolean superReturn = super.dispatchTouchEvent(event);
+        Log.i(TAG, "[dispatchTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN");
-                break;
-                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
-                //return true;
+                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN");
+                //break;
+                Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
+                return true;
             case MotionEvent.ACTION_MOVE:
                 Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE");
                 break;
@@ -64,7 +66,9 @@ public class ParentLayout extends LinearLayout {
             default:
                 break;
         }
-        return super.onInterceptTouchEvent(event);
+        boolean superReturn = super.onInterceptTouchEvent(event);
+        Log.i(TAG, "[onInterceptTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 
     @Override
@@ -85,6 +89,8 @@ public class ParentLayout extends LinearLayout {
             default:
                 break;
         }
-        return super.onTouchEvent(event);
+        boolean superReturn = super.onTouchEvent(event);
+        Log.i(TAG, "[onTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 }

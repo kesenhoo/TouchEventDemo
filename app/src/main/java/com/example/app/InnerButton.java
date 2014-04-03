@@ -35,7 +35,9 @@ public class InnerButton extends Button{
             default:
                 break;
         }
-        return super.dispatchTouchEvent(event);
+        boolean superReturn = super.dispatchTouchEvent(event);
+        Log.i(TAG, "[dispatchTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 
     @Override
@@ -56,7 +58,9 @@ public class InnerButton extends Button{
             default:
                 break;
         }
-        return super.onTouchEvent(event);
+        boolean superReturn = super.onTouchEvent(event);
+        Log.i(TAG, "[onTouchEvent] return super. = " + superReturn);
+        return superReturn;
     }
 
 
