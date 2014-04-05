@@ -70,13 +70,13 @@ public class MainActivity extends ActionBarActivity {
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN");
                 break;
-                //Log.d(TAG, "[dispatchTouchEvent] -> ACTION_DOWN, return true");
+                //Log.i(TAG, "[dispatchTouchEvent] -> ACTION_DOWN, return true");
                 //return true;
             case MotionEvent.ACTION_MOVE:
-                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE");
-                break;
-//                Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE, return true");
-//                return true;
+                //Log.d(TAG, "[dispatchTouchEvent] -> ACTION_MOVE");
+                //break;
+                Log.i(TAG, "[dispatchTouchEvent] -> ACTION_MOVE, return true");
+                return true;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[dispatchTouchEvent] -> ACTION_UP");
                 break;

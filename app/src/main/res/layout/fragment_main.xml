@@ -6,6 +6,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@android:color/holo_orange_dark"
     tools:context="com.example.app.MainActivity$PlaceholderFragment">
 
     <com.example.app.ParentLayout
@@ -20,8 +21,10 @@
             android:background="@android:color/holo_green_dark">
             <com.example.app.InnerButton
                 android:text="@string/hello_world"
+                android:background="@android:color/holo_red_dark"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:padding="10dp"/>
         </com.example.app.ChildLayout>
     </com.example.app.ParentLayout>
 </RelativeLayout>

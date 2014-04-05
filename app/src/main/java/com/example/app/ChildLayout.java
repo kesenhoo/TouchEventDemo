@@ -52,12 +52,12 @@ public class ChildLayout extends LinearLayout {
             case MotionEvent.ACTION_DOWN:
                 Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN");
                 break;
-                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
+                //Log.i(TAG, "[onInterceptTouchEvent] -> ACTION_DOWN, return true");
                 //return true;
             case MotionEvent.ACTION_MOVE:
                 Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE");
                 break;
-                //Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE, return true");
+                //Log.i(TAG, "[onInterceptTouchEvent] -> ACTION_MOVE, return true");
                 //return true;
             case MotionEvent.ACTION_UP:
                 Log.d(TAG, "[onInterceptTouchEvent] -> ACTION_UP");
